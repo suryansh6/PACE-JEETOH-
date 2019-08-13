@@ -170,7 +170,7 @@ class Bot(discord.Client):
         highest = max(lst_scores)
 #         lowest = min(lst_scores)
         answer = lst_scores.index(highest)+1
-        best_answer=":hourglass_flowing_sand:"
+        best_answer="🇼 🇦 🇮 🇹"
         if highest >0:
           if answer ==1:
             one_check="```"
