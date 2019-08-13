@@ -239,9 +239,9 @@ class Bot(discord.Client):
                 await self.update_embeds()
                 self.embed_msg = \
                     await message.channel.send('',embed=self.embed)
-                await self.embed_msg.add_reaction("<:emoji_3:609588150976905216>")
+                await self.embed_msg.add_reaction("<:emoji_3:610548957168402449>")
                 # await self.embed_msg.add_reaction(":white_check_mark:")
-                await self.embed_msg.add_reaction("<:emoji_4:609588641358151698>")
+                await self.embed_msg.add_reaction("<:emoji_2:610548920921096193>")
                      
                 self.embed_channel_id = message.channel.id
             else:
