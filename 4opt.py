@@ -17,7 +17,7 @@ BOT_OWNER_ROLE = 'RUNNER' # change to what you need
  
 
  
-oot_channel_id_list = ["609549355132911646",#galaxy
+oot_channel_id_list = ["610428546090795018",#galaxy
 "593070663548403743",
 "593990638329004032",
 "595636121124208640",
@@ -205,8 +205,8 @@ class Bot(discord.Client):
           	bold4=":x:"
  #add your games deailts and server name etc. what you need you can change         
 			
-        self.embed=discord.Embed(title="**__TRIVIA NATION 2.0__**\n\n**__CONNECTING TO JEETOH__**......", description=f"**__OPTION A__**\n{one_check}{lst_scores[0]}{one_check}{bold1}\n\n**__OPTION B__**\n{two_check}{lst_scores[1]}{two_check}{bold2}\n\n**__OPTION C__**\n{three_check}{lst_scores[2]} {three_check}{bold3}\n\n**__OPTION D__**\n{four_check}{lst_scores[3]}{four_check}{bold4}\n\n**__BEST ANSWER__**\n\n{best_answer}\n",color=0x98FB98)
-        self.embed.set_footer(text=f"KESHAV RAJ ᴳᵒᵈ#7735",icon_url="https://cdn.discordapp.com/attachments/609581567135842314/609937606964281365/JPEG_20190811_080005.jpg")
+        self.embed=discord.Embed(title="**__TRIVIA PACE__**\n\n**__CONNECTING TO JEETOH__**......", description=f"**__OPTION A__**\n{one_check}{lst_scores[0]}{one_check}{bold1}\n\n**__OPTION B__**\n{two_check}{lst_scores[1]}{two_check}{bold2}\n\n**__OPTION C__**\n{three_check}{lst_scores[2]} {three_check}{bold3}\n\n**__OPTION D__**\n{four_check}{lst_scores[3]}{four_check}{bold4}\n\n**__BEST ANSWER__**\n\n{best_answer}\n",color=0x98FB98)
+        self.embed.set_footer(text=f"created by KESHAV RAJ ᴳᵒᵈ#7735",icon_url="https://cdn.discordapp.com/attachments/609581567135842314/609937606964281365/JPEG_20190811_080005.jpg")
 
         if self.embed_msg is not None:
             await self.embed_msg.edit(embed=self.embed)
@@ -231,7 +231,7 @@ class Bot(discord.Client):
         if message.author == self.user or message.guild == None:
             return
 #thats is command lo
-        if message.content.lower() == "+j":
+        if message.content.lower() == "$j":
             await message.delete()
             if BOT_OWNER_ROLE in [role.name for role in message.author.roles]:
                 self.embed_msg = None
@@ -272,7 +272,7 @@ def bot_with_cyclic_update_process(update_event, answer_scores):
     upd_thread.start()
 
     loop = asyncio.get_event_loop()
-    loop.create_task(bot.start('NjA5Njg4NzIxNzcxNzI0ODE5.XU64Vw.5h41JE3UUg6IHdPgwPrKs47iZTs'))
+    loop.create_task(bot.start('NjEwNzY5ODE3Mzk3MzYyNzEw.XVKKSg.Quo6ETE8TtqRVvt2Jbmn76dEOtg'))
     loop.run_forever()
 
 
