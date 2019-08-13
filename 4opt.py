@@ -222,7 +222,7 @@ class Bot(discord.Client):
         await self.update_embeds()
 
         await asyncio.sleep(5)
-        await self.change_presence(activity=discord.Activity(type=1,name='with JEETOH.'))
+        await self.change_presence(activity=discord.Game(name='with JEETOH.'))
         await asyncio.sleep(5)
 #here add status of bot
     async def on_message(self, message):
