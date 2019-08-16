@@ -18,19 +18,18 @@ BOT_OWNER_ROLE = 'RUNNER' # change to what you need
 
  
 oot_channel_id_list = ["610428546090795018",#galaxy
-"593070663548403743",
 "593990638329004032",
+"593070663548403743",
 "595636121124208640",
-"609405527335763971"
 
 ]
 
 
 answer_pattern = re.compile(r'(not|n)?([1-4]{1})(\?)?(cnf)?(\?)?$', re.IGNORECASE)
 print(answer_pattern)
-apgscore = 2450
-nomarkscore = 1860
-markscore = 1700
+apgscore = 2850
+nomarkscore = 2660
+markscore = 2400
 
 async def update_scores(content, answer_scores):
     global answer_pattern
@@ -170,17 +169,17 @@ class Bot(discord.Client):
         highest = max(lst_scores)
 #         lowest = min(lst_scores)
         answer = lst_scores.index(highest)+1
-        best_answer="🇼 🇦 🇮 🇹"
+        best_answer=":hourglass_flowing_sand: "
         if highest >0:
           if answer ==1:
-            one_check="```"
+            one_check="**"
             best_answer=":regional_indicator_a:"
           if answer==1:
             bold1=""
           else:
             bold1=":x:"
           if answer ==2:
-            two_check="```"
+            two_check="**"
             best_answer=":regional_indicator_b:"
           if answer ==2:
             bold2=""
@@ -188,7 +187,7 @@ class Bot(discord.Client):
             bold2=":x:"
           
           if answer ==3:
-            three_check="```"
+            three_check="**"
             best_answer=":regional_indicator_c:"
           if answer ==3:
             bold3=""
@@ -196,7 +195,7 @@ class Bot(discord.Client):
             bold3=":x:"
             
           if answer==4:
-          	four_check="```"
+          	four_check="**"
           	best_answer=":regional_indicator_d:"
           	
           if answer==4:
@@ -205,7 +204,7 @@ class Bot(discord.Client):
           	bold4=":x:"
  #add your games deailts and server name etc. what you need you can change         
 			
-        self.embed=discord.Embed(title="**__TRIVIA PACE__**\n\n**__CONNECTING TO JEETOH__**......", description=f"**__OPTION A__**\n{one_check}{lst_scores[0]}{one_check}{bold1}\n\n**__OPTION B__**\n{two_check}{lst_scores[1]}{two_check}{bold2}\n\n**__OPTION C__**\n{three_check}{lst_scores[2]} {three_check}{bold3}\n\n**__OPTION D__**\n{four_check}{lst_scores[3]}{four_check}{bold4}\n\n**__BEST ANSWER__**\n\n{best_answer}\n",color=0x98FB98)
+        self.embed=discord.Embed(title="**__TRIVIA PACE__**\n\n**__CONNECTING TO JEETOH__**......", description=f"**__OPTION A__**\n{one_check}{lst_scores[0]}{one_check}{bold1}\n**__OPTION B__**\n{two_check}{lst_scores[1]}{two_check}{bold2}\n**__OPTION C__**\n{three_check}{lst_scores[2]} {three_check}{bold3}\n**__OPTION D__**\n{four_check}{lst_scores[3]}{four_check}{bold4}\n**__BEST ANSWER__**\n{best_answer}\n",color=0x98FB98)
         self.embed.set_footer(text=f"created by KESHAV RAJ ᴳᵒᵈ#7735",icon_url="https://cdn.discordapp.com/attachments/609581567135842314/609937606964281365/JPEG_20190811_080005.jpg")
 
         if self.embed_msg is not None:
